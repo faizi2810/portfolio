@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeContextProvider } from "@/context/theme-context";
 import ThemeSwitch from "@/components/theme-switch";
+import Header from "@/components/header";
+import { ActiveSectionContextProvider } from "@/context/active-section-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,12 +28,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      <body style={{ backgroundColor: 'grey' }}
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeContextProvider>
-          {children}
-          <ThemeSwitch/>
+          <ActiveSectionContextProvider>
+            <Header/>
+              {children}
+            <ThemeSwitch/>
+          </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
     </html>
