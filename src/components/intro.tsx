@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import ChangingText from "./changing-text";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
 
 export default function Intro(){
     const {ref} = useSectionInView('Intro',0.10);
@@ -13,7 +18,7 @@ export default function Intro(){
         <section
           ref={ref}
           id="home"
-          className="mb-16 sm:mb-0 text-center scroll-mt-[100rem] particles-section pt-28 pb-14 sm:pt-36 sm:pb-18 w-full px-4"
+          className="mb-16 sm:mb-0 text-center scroll-mt-[100rem] particles-section pt-28 pb-14 sm:pt-36 sm:pb-18 w-full px-4 bg-[#111827]"
         >
           {/* <WaveBackground /> */}
           <div className="flex items-center justify-center">
@@ -26,15 +31,19 @@ export default function Intro(){
                   duration: 0.2,
                 }}
               >
-                <Image
+                {/* <Image
                   src="/temp.png"
-                  alt="Ricardo portrait"
+                  alt="Portrait"
                   width="192"
                   height="192"
                   quality="95"
                   priority={true}
                   className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
-                />
+                /> */}
+                <Avatar className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl">
+                  <AvatarImage src="/temp.png" alt="portrait" />
+                  <AvatarFallback>FA</AvatarFallback>
+                </Avatar>
               </motion.div>
     
               <motion.span
@@ -48,13 +57,13 @@ export default function Intro(){
                   duration: 0.7,
                 }}
               >
-                👋
+                {/* 👋 */}
               </motion.span>
             </div>
           </div>
     
           <motion.h1
-            className="mb-10 mt-4 px-0 sm:px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-white max-w-[50rem] mx-auto min-h-[162px]"
+            className="mb-10 mt-4 px-0 sm:px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-white max-w-[51rem] mx-auto min-h-[162px]"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
