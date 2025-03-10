@@ -9,11 +9,12 @@ interface Chunk {
 }
 
 const messageChunks: Chunk[] = [
-  { text: "Hello, I'm Faizan.", className: 'font-bold text-blue-500' },
+  { text: "Hello, I'm" },
+  { text:' Faizan', className: 'font-bold'},
   { text: " I'm a " },
-  { text: "software engineer", className: 'font-bold' },
+  { text: "principal software engineer", className: 'font-bold' },
   { text: " at " },
-  { text: "Techlogix", className: 'font-bold text-red-500' },
+  { text: "Techlogix", className: 'font-bold' },
   { text: " in Pakistan. I'm currently working with Next.Js, Nest.Js, Angular and .Net" },
 ];
 
