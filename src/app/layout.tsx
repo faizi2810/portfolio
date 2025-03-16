@@ -6,6 +6,7 @@ import ThemeSwitch from "@/components/theme-switch";
 import Header from "@/components/header";
 import { ActiveSectionContextProvider } from "@/context/active-section-context";
 import { Nunito } from "next/font/google";
+import { ResumeDownload } from "@/components/resume-download";
 
 
 // const geistSans = Geist({
@@ -38,6 +39,7 @@ export default function RootLayout({
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
+            <ResumeDownload/>
             {children}
 
             {/* <Toaster position="top-right" /> */}
