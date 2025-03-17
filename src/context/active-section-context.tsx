@@ -13,7 +13,7 @@ type ActiveSectionContextType = {
 const ActiveSectionContext = createContext<ActiveSectionContextType | null>(null);
 
 export function ActiveSectionContextProvider({ children }: { children: ReactNode }){
-    const [activeSection, setActiveSection] = useState<SectionName>("Home");
+    const [activeSection, setActiveSection] = useState<SectionName>("Intro");
     const [timeOfLastClick, setTimeOfLastClick] = useState<number>(0);
     return (
         <ActiveSectionContext.Provider value={{

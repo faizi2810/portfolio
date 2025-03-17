@@ -14,7 +14,7 @@ export default function ThemeSwitch() {
             <Button
                 variant='outline'
                 size='icon'
-                className="fixed bottom-4 right-4 rounded-full shadow-lg h-14 w-14 dark:bg-black dark:text-white"
+                className="fixed bottom-4 right-4 rounded-full shadow-lg h-14 w-14 dark:bg-black dark:text-white hover:scale-[1.15]"
                 onClick={toggleTheme}>
                 <AnimatePresence mode="wait">
                     {theme === "light" ? (
