@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 export function ResumeDownload(){
 
     return(
-        <a href="/Resume.pdf" download>
+        <a href="/Faizan Ahmad Resume.pdf" download>
             <Button 
               variant='outline' 
               size='icon' 
