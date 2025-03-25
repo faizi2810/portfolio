@@ -35,7 +35,7 @@ const ChangingText: React.FC = () => {
           return prev;
         }
       });
-    }, 100); // Adjust the speed (ms) for the typewriter effect
+    }, 60); // Adjust the speed (ms) for the typewriter effect
 
     return () => clearInterval(intervalId);
   }, [fullMessage]);

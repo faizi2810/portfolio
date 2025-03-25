@@ -82,3 +82,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.vertical-timeline {
+  padding: 0 !important;
+}
+
+.borderBlack {
+  @apply border border-black/10;
+}
+
