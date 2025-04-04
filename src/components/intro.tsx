@@ -41,7 +41,7 @@ export default function Intro(){
                   className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
                 /> */}
                 <Avatar className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl">
-                  <AvatarImage src="/temp.png" alt="portrait" />
+                  <AvatarImage src="/Self Portait.jpeg" alt="portrait" />
                   <AvatarFallback>FA</AvatarFallback>
                 </Avatar>
               </motion.div>
