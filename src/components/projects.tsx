@@ -2,7 +2,7 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { projectsData } from "@/lib/data";
+import { professionalProjectsData, personalProjectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
 import {
@@ -18,53 +18,48 @@ export default function Projects() {
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28" >
-      <SectionHeading>Professional Projects</SectionHeading>
-      {/* <div>
-        {projectsData.map((project, index) => (
-          <React.Fragment key={index}>
-            <Project {...project} />
-          </React.Fragment>
-        ))}
-      </div> */}
-      <Carousel className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[57rem]">
-      <CarouselContent>
-        {projectsData.map((project, index) => (
-          <CarouselItem key={index}>
-            <div>
-            <React.Fragment key={index}>
-                <Project {...project} />
-            </React.Fragment>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+      {professionalProjectsData.length > 0 && (
+        <>
+          <SectionHeading>Professional Projects</SectionHeading>
+          <Carousel className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[57rem]">
+            <CarouselContent>
+              {professionalProjectsData.map((project, index) => (
+                <CarouselItem key={index}>
+                  <div>
+                  <React.Fragment key={index}>
+                      <Project {...project} />
+                  </React.Fragment>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </>
+      )}
+      
 
-    <SectionHeading className="mt-20">Personal Projects</SectionHeading>
-      {/* <div>
-        {projectsData.map((project, index) => (
-          <React.Fragment key={index}>
-            <Project {...project} />
-          </React.Fragment>
-        ))}
-      </div> */}
-      <Carousel className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[57rem]">
-      <CarouselContent>
-        {projectsData.map((project, index) => (
-          <CarouselItem key={index}>
-            <div>
-            <React.Fragment key={index}>
-                <Project {...project} />
-            </React.Fragment>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    {personalProjectsData.length > 0 && (
+      <>
+        <SectionHeading className="mt-20">Personal Projects</SectionHeading>
+        <Carousel className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[57rem]">
+          <CarouselContent>
+            {personalProjectsData.map((project, index) => (
+              <CarouselItem key={index}>
+                <div>
+                <React.Fragment key={index}>
+                    <Project {...project} />
+                </React.Fragment>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </>
+    )}
     </section>
   );
 }
