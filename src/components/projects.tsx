@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/carousel"
 
 export default function Projects() {
-  const { ref } = useSectionInView("Projects", 0.10);
+  const { ref } = useSectionInView("Projects", 0.40);
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28" >

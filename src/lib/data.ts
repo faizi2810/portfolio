@@ -72,7 +72,7 @@ export const links = [
         "logos:azure-icon",
         "devicon:azuresqldatabase"
       ],
-      imageUrl: '/projects/Hp-Label-Editor-With-Items.png',
+      imageUrl: '/projects/Hp_Label_Editor_With_Items.png',
       githubLink: "",
     },
     {
@@ -117,7 +117,7 @@ export const links = [
         "logos:aws",
         "logos:firebase"
       ],
-      imageUrl: '/temp.png',
+      imageUrl: '/projects/2nd Bid.png',
       githubLink: "",
       demoLink: "",
     },
@@ -130,14 +130,45 @@ export const links = [
         "devicon:csharp",
         "logos:dotnet"
       ],
-      imageUrl: '/temp.png',
+      imageUrl: '/projects/NFS Ascent.png',
       githubLink: "",
       demoLink: "",
     },
   ] as const;
 
 
-  export const personalProjectsData = [];
+  export const personalProjectsData = [
+    {
+      title: "Developer Portfolio",
+      description:
+        "A modern, responsive developer portfolio built with Next.js, Tailwind CSS, and ShadCN UI. It features a clean UI to showcase professional and personal projects, highlight technical skills with icons, and present experience, education, and contact details. Includes support for light/dark themes and a downloadable resume to streamline outreach for recruiters and collaborators.",
+      tags: ["Next.js", "Tailwind CSS", "ShadCN", "TypeScript", "Dark Mode", "Responsive UI"],
+      icons: [
+        "devicon:nextjs",
+        "devicon:tailwindcss",
+        "logos:typescript-icon",
+        "material-symbols-light:dark-mode"
+      ],
+      imageUrl: '/projects/Portfolio.png',
+      githubLink: "",
+      demoLink: "",
+    },
+    {
+      title: "Icebreaker Application",
+      description:
+        "An AI-powered application built with Python and LangChain to streamline user discovery on social platforms. Features two intelligent agents—one for locating users on LinkedIn and another for Twitter. Includes a custom tool designed to support and enhance agent functionality for more accurate and context-aware results.",
+      tags: ["Python", "LangChain", "Agents", "LinkedIn", "Twitter", "Custom Tools"],
+      icons: [
+        "logos:python",
+        "simple-icons:langchain",
+        "logos:linkedin-icon",
+        "logos:twitter"
+      ],
+      imageUrl: "/projects/IceBreaker.png",
+      githubLink: "",
+      demoLink: "",
+    }
+  ];
 
   export const skillsData = [
     {
