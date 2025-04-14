@@ -12,6 +12,7 @@ export default function Home() {
       <div className="flex flex-col items-center px-4">
         <SectionDivider />
         <Projects />
+        <Skills/>
       </div>
     </main>
   );

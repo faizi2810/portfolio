@@ -1,3 +1,5 @@
+import React from "react";
+import { CgWorkAlt } from "react-icons/cg";
 
 export const links = [
     {
@@ -258,5 +260,32 @@ export const links = [
     {
       name: "Docker",
       icon: "logos:docker-icon",
+    }
+  ] as const;
+
+  export const experiencesData = [
+    {
+      title: "Principal Software Engineer",
+      location: "Techlogix",
+      description:
+        "Led the development of full-stack applications using technologies such as Next.js, React, Python, .NET, and Angular. Notable projects include RosieBot, a Slack-integrated AI assistant leveraging LLMs, PSCI's government contracting SaaS platform using Supabase and Tailwind CSS, and HP's Label Designer built on .NET 8 and Azure. Delivered scalable, secure solutions across cloud platforms (Azure, AWS) while integrating APIs, automation services, and dynamic UI components.",
+      icon: React.createElement(CgWorkAlt),
+      date: "October 2021 - Present",
+    },
+    {
+      title: "Senior Software Engineer",
+      location: "Analytics",
+      description:
+        "Contributed to multiple full-stack .NET projects including KMBL, a financial scoring system for banking loan eligibility, and 2nd Bid, a real estate platform using Flutter and AWS. Built APIs using Clean Architecture, CQRS, and Dapper ORM, implemented background services for data sync and notifications, and integrated social login and Firebase. Focused on scalable, cloud-deployed solutions with MySQL and S3 for efficient data management.",
+      icon: React.createElement(CgWorkAlt),
+      date: "February 2021 - October 2021",
+    },
+    {
+      title: "Software Engineer",
+      location: "Netsol",
+      description:
+        "Worked on ASCENT 2.0, a Contract Management System used by global automotive clients like Mercedes-Benz and BMW. Developed WPF desktop applications using .NET and MVVM architecture. Built reusable UI frameworks, handled full software lifecycle from development to hotfixes, and optimized backend performance. Contributed to dynamic UI rendering and resolution of complex client issues across leasing and finance modules.",
+      icon: React.createElement(CgWorkAlt),
+      date: "July 2017 - February 2021",
     }
   ] as const;
