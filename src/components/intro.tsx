@@ -2,7 +2,6 @@
 
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Icon } from "@iconify/react";
 import ChangingText from "./changing-text";
 import {
