@@ -12,7 +12,7 @@ type ProjectProps = {
   description: string;
   tags: readonly string[];
   icons: readonly string[];
-  imageUrl: StaticImageData;
+  imageUrl: string | StaticImageData;
   githubLink?: string;
   demoLink?: string;
   urlLink?: string;
@@ -21,7 +21,6 @@ type ProjectProps = {
 export default function Project({
   title,
   description,
-  tags,
   icons,
   imageUrl,
   githubLink,
