@@ -90,7 +90,7 @@ export const links = [
         "devicon:azuresqldatabase",
         "devicon:cosmosdb"
       ],
-      imageUrl: '/temp.png',
+      imageUrl: '/projects/Digitrax-Dashboard.png',
       githubLink: "",
       urlLink: "",
     },
