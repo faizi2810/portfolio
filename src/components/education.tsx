@@ -35,11 +35,15 @@ export default function Education() {
         </div>
 
         <div>
-          <p className="font-medium">
+          <p className="text-lg font-medium">
             Bachelor of Computer Science
           </p>
           <p>Punjab University College of Information Technology</p>
           <p className="mt-1">Graduated in 2017</p>
+          <p className="my-1">GPA 3/4</p>
+          <ul className="list-disc pl-6">
+            <li>Principal`&apos;s Honor List - 2016</li>
+          </ul>
         </div>
       </div>
     </motion.section>
