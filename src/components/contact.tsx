@@ -7,7 +7,6 @@ import { useSectionInView } from "@/lib/hooks";
 import { SubmitButton } from "./submit-btn";
 import { useToast } from "@/hooks/use-toast";
 import { sendEmail } from "actions/sendEmail";
-import SubmitBtn from "./submit-button";
 
 
 export default function Contact() {
