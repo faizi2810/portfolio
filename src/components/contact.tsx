@@ -49,14 +49,16 @@ export default function Contact() {
           if (error) {
             toast({
               variant:"destructive",
-              description: error,
+              title: "Oops! Email couldn't be sent.",
+              description: "You can reach me directly at ifaizanasif@gmail.com",
             })
             return;
           }
 
           toast({
-            description: "Email sent successfully!",
-          })
+            title: "Message sent successfully!",
+            description: "Thanks for reaching out.",
+          });
         }}
       >
         <input
