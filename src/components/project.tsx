@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { BiLinkExternal } from "react-icons/bi";
 import { AiFillGithub, AiFillYoutube } from "react-icons/ai";
 import { Icon } from "@iconify/react";
+import { cn } from "@/lib/utils";
 
 type ProjectProps = {
   title: string;
@@ -16,6 +17,7 @@ type ProjectProps = {
   githubLink?: string;
   demoLink?: string;
   urlLink?: string;
+  imageClasses?: string
 };
 
 export default function Project({
@@ -26,6 +28,7 @@ export default function Project({
   githubLink,
   demoLink,
   urlLink,
+  imageClasses
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -101,10 +104,7 @@ export default function Project({
           src={imageUrl}
           alt="Project I worked on"
           quality={95}
-          className="absolute hidden lg:block top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0]
-          transition
-          lg:scale-[1.1]
-          "
+          className={cn("absolute hidden lg:block top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0] transition lg:scale-[1.1]", imageClasses)}
         />
       </section>
     </motion.div>

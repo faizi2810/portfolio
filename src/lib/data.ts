@@ -45,6 +45,7 @@ export const links = [
       imageUrl: '/projects/RosieBot.png',
       githubLink: "",
       demoLink: "",
+      imageClasses:"top-[69px] right-4 w-[27rem]"
     },
     {
       title: "PSCI",
@@ -61,6 +62,7 @@ export const links = [
       imageUrl: '/projects/PSCI.png',
       urlLink: "",
       githubLink: "",
+      imageClasses:"top-[43px] right-4 w-[26rem]"
     },
     {
       title: "HP Label Designer",
@@ -74,8 +76,9 @@ export const links = [
         "logos:azure-icon",
         "devicon:azuresqldatabase"
       ],
-      imageUrl: '/projects/Hp_Label_Editor_With_Items.png',
+      imageUrl: '/projects/Hp-Label-Editor-With-Items.png',
       githubLink: "",
+      imageClasses:"top-[98px] right-4 w-[27rem]"
     },
     {
       title: "DIGITRAX",
@@ -93,6 +96,7 @@ export const links = [
       imageUrl: '/projects/Digitrax-Dashboard.png',
       githubLink: "",
       urlLink: "",
+      imageClasses:"top-[98px] right-4 w-[27rem]"
     },
     {
       title: "KMBL - Financial Scoring System",
@@ -104,8 +108,9 @@ export const links = [
         "logos:angular-icon",
         "logos:mysql"
       ],
-      imageUrl: '/temp.png',
+      imageUrl: '/projects/KMBL.png',
       githubLink: "",
+      imageClasses:"top-[40px] right-4 w-[19rem]"
     },
     {
       title: "2nd Bid",
@@ -122,6 +127,7 @@ export const links = [
       imageUrl: '/projects/2nd Bid.png',
       githubLink: "",
       demoLink: "",
+      imageClasses:"top-[-70px] -right-10 w-[19rem]"
     },
     {
       title: "ASCENT 2.0 - Contract Management System",
@@ -135,6 +141,7 @@ export const links = [
       imageUrl: '/projects/NFS Ascent.png',
       githubLink: "",
       demoLink: "",
+      imageClasses:"top-[45px] right-4 w-[27rem]"
     },
   ] as const;
 
@@ -154,6 +161,7 @@ export const links = [
       imageUrl: '/projects/Portfolio.png',
       githubLink: "",
       demoLink: "",
+      imageClasses:"top-[50px] right-4 w-[27rem]"
     },
     {
       title: "Icebreaker Application",
@@ -169,6 +177,7 @@ export const links = [
       imageUrl: "/projects/IceBreaker.png",
       githubLink: "",
       demoLink: "",
+      imageClasses:"top-[45px] right-4 w-[25rem]"
     }
   ];
 
@@ -274,7 +283,7 @@ export const links = [
     },
     {
       title: "Senior Software Engineer",
-      location: "Analytics",
+      location: "TenX",
       description:
         "Contributed to multiple full-stack .NET projects including KMBL, a financial scoring system for banking loan eligibility, and 2nd Bid, a real estate platform using Flutter and AWS. Built APIs using Clean Architecture, CQRS, and Dapper ORM, implemented background services for data sync and notifications, and integrated social login and Firebase. Focused on scalable, cloud-deployed solutions with MySQL and S3 for efficient data management.",
       icon: React.createElement(CgWorkAlt),

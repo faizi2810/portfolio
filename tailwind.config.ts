@@ -59,4 +59,19 @@ export default {
   	}
   },
   plugins: [require("tailwindcss-animate")],
+	safelist: [
+  	'top-[69px]',
+		'top-[43px]',
+		'top-[98px]',
+		'top-[27px]',
+		'top-[40px]',
+		'top-[-70px]',
+		'top-[45px]',
+		'top-[50px]',
+		'w-[27rem]',
+		'w-[26rem]',
+		'w-[22rem]',
+		'w-[19rem]',
+		'w-[25rem]'
+  ],
 } satisfies Config;
