@@ -67,7 +67,7 @@ export default {
 		'top-[40px]',
 		'top-[-70px]',
 		'top-[45px]',
-		'top-[50px]',
+		'top-[92px]',
 		'w-[27rem]',
 		'w-[26rem]',
 		'w-[22rem]',

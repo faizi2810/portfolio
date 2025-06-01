@@ -161,7 +161,7 @@ export const links = [
       imageUrl: '/projects/Portfolio.png',
       githubLink: "https://github.com/faizi2810/portfolio",
       demoLink: "",
-      imageClasses:"top-[50px] right-4 w-[27rem]"
+      imageClasses:"top-[92px] right-4 w-[27rem]"
     },
     {
       title: "Icebreaker Application",
