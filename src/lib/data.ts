@@ -159,7 +159,7 @@ export const links = [
         "material-symbols-light:dark-mode"
       ],
       imageUrl: '/projects/Portfolio.png',
-      githubLink: "",
+      githubLink: "https://github.com/faizi2810/portfolio",
       demoLink: "",
       imageClasses:"top-[50px] right-4 w-[27rem]"
     },
@@ -175,7 +175,7 @@ export const links = [
         "logos:twitter"
       ],
       imageUrl: "/projects/IceBreaker.png",
-      githubLink: "",
+      githubLink: "https://github.com/faizi2810/icebreaker",
       demoLink: "",
       imageClasses:"top-[45px] right-4 w-[25rem]"
     }
