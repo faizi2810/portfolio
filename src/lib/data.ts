@@ -160,7 +160,7 @@ export const links = [
       ],
       imageUrl: '/projects/Portfolio.png',
       githubLink: "https://github.com/faizi2810/portfolio",
-      demoLink: "",
+      urlLink: "https://www.faizandev.com",
       imageClasses:"top-[92px] right-4 w-[27rem]"
     },
     {
