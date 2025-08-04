@@ -7,6 +7,7 @@ import { ActiveSectionContextProvider } from "@/context/active-section-context";
 import { Nunito } from "next/font/google";
 import { ResumeDownload } from "@/components/resume-download";
 import { Toaster } from "@/components/ui/toaster";
+import { Analytics } from "@vercel/analytics/next"
 
 
 // const geistSans = Geist({
@@ -41,7 +42,7 @@ export default function RootLayout({
             <Header />
             <ResumeDownload/>
             {children}
-
+            <Analytics />
             <Toaster/>
             <ThemeSwitch />
           </ActiveSectionContextProvider>
