@@ -16,8 +16,8 @@ export default function Intro(){
     return (
         <section
           ref={ref}
-          id="home"
-          className="mb-16 sm:mb-0 text-center scroll-mt-[100rem] particles-section pt-28 pb-14 sm:pt-36 sm:pb-18 w-full px-4 bg-[#111827]"
+          id="intro"
+          className="mb-16 sm:mb-0 text-center particles-section pt-28 pb-14 sm:pt-36 sm:pb-18 w-full px-4 bg-[#111827]"
         >
           {/* <WaveBackground /> */}
           <div className="flex items-center justify-center">
