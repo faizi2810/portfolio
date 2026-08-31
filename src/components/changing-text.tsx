@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 interface Chunk {
@@ -18,13 +18,24 @@ const messageChunks: Chunk[] = [
   { text: " in Pakistan. I'm currently working with Next.Js, Nest.Js, Angular and .Net" },
 ];
 
-const ChangingText: React.FC = () => {
-  // Combine all chunks into one full message string for counting
-  const fullMessage = messageChunks.map(chunk => chunk.text).join('');
-  // State: number of characters to display
-  const [displayedLength, setDisplayedLength] = useState(0);
+const fullMessage = messageChunks.map(chunk => chunk.text).join('');
 
-  useEffect(() => {
+const TYPING_SPEED_MS = 60;
+
+// useLayoutEffect warns when it runs on the server, so fall back to useEffect there.
+const useIsomorphicLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+
+const ChangingText: React.FC = () => {
+  // Starts fully typed so the server-rendered HTML carries the whole headline,
+  // then rewinds before the browser paints so nothing flashes.
+  const [displayedLength, setDisplayedLength] = useState(fullMessage.length);
+
+  useIsomorphicLayoutEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
     setDisplayedLength(0);
     const intervalId = setInterval(() => {
       setDisplayedLength(prev => {
@@ -35,18 +46,16 @@ const ChangingText: React.FC = () => {
           return prev;
         }
       });
-    }, 60); // Adjust the speed (ms) for the typewriter effect
+    }, TYPING_SPEED_MS);
 
     return () => clearInterval(intervalId);
-  }, [fullMessage]);
+  }, []);
 
-  // Rebuild the message while preserving each chunk's styling.
   let remaining = displayedLength;
   const renderedChunks = messageChunks.map((chunk, index) => {
     if (remaining <= 0) return null;
     const { text, className } = chunk;
     if (remaining >= text.length) {
-      // Entire chunk is visible
       remaining -= text.length;
       return (
         <span key={index} className={className}>
@@ -54,7 +63,6 @@ const ChangingText: React.FC = () => {
         </span>
       );
     } else {
-      // Only part of the chunk is visible
       const partialText = text.slice(0, remaining);
       remaining = 0;
       return (
@@ -72,7 +80,8 @@ const ChangingText: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="text-center"
     >
-      {renderedChunks}
+      <span className="sr-only">{fullMessage}</span>
+      <span aria-hidden="true">{renderedChunks}</span>
     </motion.div>
   );
 };
